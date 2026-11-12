@@ -29,11 +29,11 @@ All runs complete. Total energy (-361.770793768 Ha) and all band gaps are identi
 
 | 1 node | master | PR, GEMM (default) | PR, FFT |
 |---|---|---|---|
-| SCF (4 steps from restart) | 17 s | 6 s | 6 s |
+| SCF (4 steps from restart) | 17 s | 5 s | 6 s |
 | χ(iτ), per time point | 90.1–94.2 s | 231.6–254.0 s | 107.6–114.6 s |
-| Σc(iτ), per time point | 277.0–287.3 s | 504.6–568.5 s | 309.7–328.5 s |
-| k ↔ R transforms in GW (timer total) | 800 s | see output | 2648 s |
-| Total | 12897 s | see output | 14566 s |
+| Σc(iτ), per time point | 277.0–287.3 s | 504.5–569.4 s | 309.7–328.5 s |
+| k ↔ R transforms in GW (timer total) | 800 s | 12216 s | 2648 s |
+| Total | 12897 s | 24398 s | 14566 s |
 
 k ↔ R timers: master `gw_k_grid_to_real_cells` + `cell_to_k_grid_fft`; PR
 `k_to_real_cell_transform` + `cell_to_k_transform`.

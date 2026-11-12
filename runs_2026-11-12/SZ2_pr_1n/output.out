@@ -2217,3 +2217,284 @@
  GW Σ_c(iτ) point  30 / 32                            Exec. time:        511.2 s
  GW Σ_c(iτ) point  31 / 32                            Exec. time:        511.0 s
  GW Σ_c(iτ) point  32 / 32                            Exec. time:        511.2 s
+ evGW0 cycle   9 /  10 Max G eigenvalue change:                        0.0086 eV
+ GW Σ_c(iτ) point   1 / 32                            Exec. time:        565.0 s
+ GW Σ_c(iτ) point   2 / 32                            Exec. time:        563.4 s
+ GW Σ_c(iτ) point   3 / 32                            Exec. time:        552.5 s
+ GW Σ_c(iτ) point   4 / 32                            Exec. time:        559.0 s
+ GW Σ_c(iτ) point   5 / 32                            Exec. time:        564.0 s
+ GW Σ_c(iτ) point   6 / 32                            Exec. time:        563.6 s
+ GW Σ_c(iτ) point   7 / 32                            Exec. time:        563.7 s
+ GW Σ_c(iτ) point   8 / 32                            Exec. time:        563.5 s
+ GW Σ_c(iτ) point   9 / 32                            Exec. time:        565.7 s
+ GW Σ_c(iτ) point  10 / 32                            Exec. time:        562.1 s
+ GW Σ_c(iτ) point  11 / 32                            Exec. time:        550.7 s
+ GW Σ_c(iτ) point  12 / 32                            Exec. time:        554.6 s
+ GW Σ_c(iτ) point  13 / 32                            Exec. time:        558.8 s
+ GW Σ_c(iτ) point  14 / 32                            Exec. time:        559.6 s
+ GW Σ_c(iτ) point  15 / 32                            Exec. time:        560.0 s
+ GW Σ_c(iτ) point  16 / 32                            Exec. time:        559.5 s
+ GW Σ_c(iτ) point  17 / 32                            Exec. time:        567.4 s
+ GW Σ_c(iτ) point  18 / 32                            Exec. time:        569.4 s
+ GW Σ_c(iτ) point  19 / 32                            Exec. time:        550.6 s
+ GW Σ_c(iτ) point  20 / 32                            Exec. time:        557.4 s
+ GW Σ_c(iτ) point  21 / 32                            Exec. time:        559.2 s
+ GW Σ_c(iτ) point  22 / 32                            Exec. time:        559.7 s
+ GW Σ_c(iτ) point  23 / 32                            Exec. time:        561.9 s
+ GW Σ_c(iτ) point  24 / 32                            Exec. time:        561.7 s
+ GW Σ_c(iτ) point  25 / 32                            Exec. time:        514.7 s
+ GW Σ_c(iτ) point  26 / 32                            Exec. time:        515.7 s
+ GW Σ_c(iτ) point  27 / 32                            Exec. time:        505.3 s
+ GW Σ_c(iτ) point  28 / 32                            Exec. time:        511.2 s
+ GW Σ_c(iτ) point  29 / 32                            Exec. time:        509.7 s
+ GW Σ_c(iτ) point  30 / 32                            Exec. time:        510.6 s
+ GW Σ_c(iτ) point  31 / 32                            Exec. time:        513.0 s
+ GW Σ_c(iτ) point  32 / 32                            Exec. time:        510.2 s
+ evGW0 cycle  10 /  10 Max G eigenvalue change:                        0.0085 eV
+ evGW0 reached MAX_ITER before eigenvalue convergence.
+ 
+ SCF valence band maximum (eV):                                            5.686
+ SCF conduction band minimum (eV):                                         7.657
+ SCF indirect band gap (eV):                                               1.971
+ SCF direct band gap (eV):                                                 2.138
+ 
+ evGW0 valence band maximum (eV):                                          5.974
+ evGW0 conduction band minimum (eV):                                       9.399
+ evGW0 indirect band gap (eV):                                             3.425
+ evGW0 direct band gap (eV):                                               3.606
+ 
+ Hartree-Fock with SCF orbitals valence band maximum (eV):                 1.018
+ Hartree-Fock with SCF orbitals conduction band minimum (eV)              15.148
+ Hartree-Fock with SCF orbitals indirect band gap (eV):                   14.129
+ Hartree-Fock with SCF orbitals direct band gap (eV):                     14.197
+
+ ENERGY| Total FORCE_EVAL ( QS ) energy [hartree]           -361.770798051955921
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                                DBCSR STATISTICS                             -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ COUNTER                                    TOTAL       BLAS       SMM       ACC
+ flops inhomo. stacks                           0       0.0%      0.0%      0.0%
+ flops total                         0.000000E+00       0.0%      0.0%      0.0%
+ flops max/rank                      0.000000E+00       0.0%      0.0%      0.0%
+ matmuls inhomo. stacks                         0       0.0%      0.0%      0.0%
+ matmuls total                                  0       0.0%      0.0%      0.0%
+ number of processed stacks                     0       0.0%      0.0%      0.0%
+ average stack size                                     0.0       0.0       0.0
+ marketing flops                     0.000000E+00
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                      DBCSR MESSAGE PASSING PERFORMANCE                      -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ ROUTINE             CALLS      AVE VOLUME [Bytes]
+ MP_Bcast                1                     12.
+ MP_Allreduce           19                     21.
+ MP_Alltoall         15414                 180437.
+ -------------------------------------------------------------------------------
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                                GRID STATISTICS                              -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ LP    KERNEL             BACKEND                              COUNT     PERCENT
+ 4     integrate ortho    CPU                                  17199      30.21%
+ 5     integrate ortho    CPU                                  13636      23.95%
+ 4     collocate ortho    CPU                                  12285      21.58%
+ 5     collocate ortho    CPU                                   9740      17.11%
+ 6     integrate ortho    CPU                                   2359       4.14%
+ 6     collocate ortho    CPU                                   1685       2.96%
+ 0     collocate general  CPU                                     24       0.04%
+ 0     integrate general  CPU                                     12       0.02%
+ -------------------------------------------------------------------------------
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                          OFFLOAD MEMPOOL STATISTICS                         -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ Memory consumption                Number of allocations  Used [MiB]  Size [MiB]
+ Host                                                  6          22          22
+ -------------------------------------------------------------------------------
+
+ MEMORY| Estimated peak process memory [MiB]                                1908
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                         MESSAGE PASSING PERFORMANCE                         -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+
+ ROUTINE             CALLS      AVE VOLUME [Bytes]
+ MP_Group                7
+ MP_Bcast           117618                 410660.
+ MP_Allreduce        92062                 208121.
+ MP_Gather            1729                1557504.
+ MP_Sync                 4
+ MP_Alltoall        197414               48178009.
+ MP_SendRecv           225                 120608.
+ MP_ISendRecv          315                 120608.
+ MP_Wait             55535
+ MP_comm_split          29
+ MP_ISend            67575                 187329.
+ MP_IRecv            84075                 150714.
+ MP_Send              4536                6230016.
+ -------------------------------------------------------------------------------
+
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                           R E F E R E N C E S                               -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ 
+ CP2K version 2026.2 (Development Version), the CP2K developers group (2026).
+ CP2K is freely available from https://www.cp2k.org/ .
+ 
+ M. Iannuzzi, J. Wilhelm, F. Stein, A. Bussy, H. Elgabarty, D. Golze, A. Hehn, 
+ M. Graml, S. Marek, B. Sertcan Gökmen, C. Schran, H. Forbert, R. Z. 
+ Khaliullin, A. Kozhevnikov, M. Taillefumier, R. Meli, V. V. Rybkin, M. Brehm, 
+ R. Schade, O. Schütt, J. V. Pototschnig, H. Mirhosseini, A. Knüpfer, D. Marx, 
+ M. Krack, J. Hutter, T. D. Kühne.
+ J. Phys. Chem. B 130, 1237-1310 (2026).
+ The CP2K Program Package Made Simple.
+ https://doi.org/10.1021/acs.jpcb.5c05851
+
+ M. Graml, K. Zollner, D. Hernangómez-Pérez, P. E. Faria Junior, J. Wilhelm.
+ J. Chem. Theory Comput. 20, 2202-2208 (2024).
+ Low-scaling GW algorithm applied to twisted transition-metal dichalcogenide 
+ heterobilayers.
+ https://doi.org/10.1021/acs.jctc.3c01230
+
+ T. D. Kühne, M. Iannuzzi, M. Del Ben, V. V. Rybkin, P. Seewald, F. Stein, T. 
+ Laino, R. Z. Khaliullin, O. Schütt, F. Schiffmann, D. Golze, J. Wilhelm, S. 
+ Chulkov, M. H. Bani-Hashemian, V. Weber, U. Borstnik, M. Taillefumier, A. S. 
+ Jakobovits, A. Lazzaro, H. Pabst, T. Müller, R. Schade, M. Guidon, S. 
+ Andermatt, N. Holmberg, G. K. Schenter, A. Hehn, A. Bussy, F. Belleflamme, G. 
+ Tabacchi, A. Glöß, M. Lass, I. Bethune, C. J. Mundy, C. Plessl, M. Watkins, 
+ J. VandeVondele, M. Krack, J. Hutter.
+ J. Chem. Phys. 152, 194103 (2020).
+ CP2K: An electronic structure and molecular dynamics software package - 
+ Quickstep: Efficient and accurate electronic structure calculations.
+ https://doi.org/10.1063/5.0007045
+
+ G. L. Stoychev, A. A. Auer, F. Neese.
+ J. Chem. Theory Comput. 13, 554-562 (2017).
+ Automatic Generation of Auxiliary Basis Sets.
+ https://doi.org/10.1021/acs.jctc.6b01041
+
+ O. Schuett, P. Messmer, J. Hutter, J. VandeVondele.
+ Electronic Structure Calculations on Graphics Processing Units, 173-190 (2016).
+ GPU-Accelerated Sparse Matrix-Matrix Multiplication for Linear Scaling Density 
+ Functional Theory.
+ https://doi.org/10.1002/9781118670712.ch8
+
+ U. Borstnik, J. VandeVondele, V. Weber, J. Hutter.
+ Parallel Comput. 40, 47-58 (2014).
+ Sparse matrix multiplication: The distributed block-compressed sparse row 
+ library.
+ https://doi.org/10.1016/j.parco.2014.03.012
+
+ J. VandeVondele, J. Hutter.
+ J. Chem. Phys. 127, 114105 (2007).
+ Gaussian basis sets for accurate calculations on molecular systems in gas and 
+ condensed phases.
+ https://doi.org/10.1063/1.2770708
+
+ J. VandeVondele, M. Krack, F. Mohamed, M. Parrinello, T. Chassaing, J. Hutter.
+ Comput. Phys. Commun. 167, 103-128 (2005).
+ QUICKSTEP: Fast and accurate density functional calculations using a mixed 
+ Gaussian and plane waves approach.
+ https://doi.org/10.1016/j.cpc.2004.12.014
+
+ M. Krack.
+ Theor. Chem. Acc. 114, 145-152 (2005).
+ Pseudopotentials for H to Kr optimized for gradient-corrected 
+ exchange-correlation functionals.
+ https://doi.org/10.1007/s00214-005-0655-y
+
+ M. Frigo, S. G. Johnson.
+ Proc. IEEE 93, 216-231 (2005).
+ The design and implementation of FFTW3.
+ https://doi.org/10.1109/JPROC.2004.840301
+
+ C. Hartwigsen, S. Goedecker, J. Hutter.
+ Phys. Rev. B 58, 3641-3662 (1998).
+ Relativistic separable dual-space Gaussian pseudopotentials from H to Rn.
+ https://doi.org/10.1103/PhysRevB.58.3641
+
+ G. Lippert, J. Hutter, M. Parrinello.
+ Mol. Phys. 92, 477-487 (1997).
+ A hybrid Gaussian and plane wave density functional scheme.
+ https://doi.org/10.1080/002689797170220
+
+ S. Goedecker, M. Teter, J. Hutter.
+ Phys. Rev. B 54, 1703-1710 (1996).
+ Separable dual-space Gaussian pseudopotentials.
+ https://doi.org/10.1103/PhysRevB.54.1703
+
+ J. P. Perdew, K. Burke, M. Ernzerhof.
+ Phys. Rev. Lett. 77, 3865-3868 (1996).
+ Generalized gradient approximation made simple.
+ https://doi.org/10.1103/PhysRevLett.77.3865
+
+ R. H. Byrd, P. H. Lu, J. Nocedal, C. Y. Zhu.
+ SIAM J. Sci. Comput. 16, 1190-1208 (1995).
+ A Limited Memory Algorithm for Bound Constrained Optimization.
+ https://doi.org/10.1137/0916069
+
+ C.-L. Fu, K.-M. Ho.
+ Phys. Rev. B 28, 5480-5486 (1983).
+ First-principles calculation of the equilibrium ground-state properties of 
+ transition metals: Applications to Nb and Mo.
+ https://doi.org/10.1103/PhysRevB.28.5480
+
+ C. G. Broyden.
+ Math. Comput. 19, 577-593 (1965).
+ A class of methods for solving nonlinear simultaneous equations.
+ https://doi.org/10.1090/S0025-5718-1965-0198670-6
+
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                                T I M I N G                                  -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ SUBROUTINE                       CALLS  ASD         SELF TIME        TOTAL TIME
+                                MAXIMUM       AVERAGE  MAXIMUM  AVERAGE  MAXIMUM
+ CP2K                                 1  1.0     0.10     0.12 24398.10 24398.10
+ qs_energies                          1  2.0     0.01     0.01 24397.73 24397.73
+ qs_energies_properties               1  3.0     0.00     0.00 24392.29 24392.29
+ post_scf_bandstructure               1  4.0     0.00     0.00 24392.29 24392.29
+ run_gw                               1  5.0     0.00     0.00 24378.73 24378.75
+ gw_calc_ri_rs_small_cell_full_       1  6.0     0.00     0.01 24356.82 24356.84
+ compute_Sigma_c_and_QP               1  7.0     0.02     0.03 22179.66 22179.67
+ compute_Sigma_c_from_W_PQ           10  8.0   372.83   388.56 22166.25 22166.39
+ k_to_real_cell_transform           130  9.0  9296.67  9366.50  9296.67  9366.50
+ self_energy_pairs_to_Bloch          81  9.0  4844.20  4915.91  5209.38  5254.60
+ product_to_k_pair_centered       12905  9.0   651.63   680.57  3377.34  3493.79
+ cell_to_k_transform              13151 10.0  2740.64  2849.98  2740.64  2849.98
+ project_auxiliary_time_q_to_ff      40  9.0  1779.39  1844.66  2572.77  2728.16
+ mp_alltoall_z11v                192897 10.2  1330.87  1674.51  1330.87  1674.51
+ build_green_pairs                   89  9.0   815.31   831.37  1488.83  1537.44
+ compute_G_and_chi                    1  7.0     0.00     0.00  1142.79  1142.88
+ compute_chi                          1  8.0   110.29   113.93  1048.49  1048.61
+ q_matrices_to_fft_pairs             41 10.0   518.71   712.81   796.31  1033.78
+ mp_sum_dv                        12042  7.9   253.19   607.76   253.19   607.76
+ compute_W0                           1  7.0     7.79     8.59   551.60   551.70
+ add_gamma_corr_cell_correction      40  9.0   495.60   519.11   495.60   519.11
+ -------------------------------------------------------------------------------
+
+ The number of warnings for this run is : 1
+ 
+ -------------------------------------------------------------------------------
+  **** **** ******  **  PROGRAM ENDED AT                 2026-11-12 19:39:27.483
+ ***** ** ***  *** **   PROGRAM RAN ON                                   n2hcn04
+ **    ****   ******    PROGRAM RAN BY                                  eprop2d1
+ ***** **    ** ** **   PROGRAM PROCESS ID                                288653
+  **** **  *******  **  PROGRAM STOPPED IN /scratch/hpc-prf-dyncrys/eprop2d1_Jan
+                                           /02_Claude/0051_pr6454/cases/SZ2_pr2_
+                                           1n
