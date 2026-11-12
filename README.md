@@ -68,14 +68,14 @@ All runs use 16 MPI ranks x 8 OpenMP threads per node (`OMP_NUM_THREADS=8`), see
 The only input difference between the runs is the line `RSKP_TRANSFORM FFT` in `&KPOINTS` for
 `SZ2_prfft_4n`.
 
-### 1. `RSKP_TRANSFORM FFT`: abort in the SCF
+#### 1. `RSKP_TRANSFORM FFT`: abort in the SCF
 
 ```
 R-to-K route is incompatible or forced FFT exceeds the memory budget   (qs_kpoint_operators.F:328)
 kpoint_operator_prepare <- do_general_diag_kp <- qs_scf_new_mos_kp <- scf_env_do_scf_inner_loop
 ```
 
-### 2. `RSKP_TRANSFORM GEMM` (default): SCF fine, GW slower, then SIGSEGV
+#### 2. `RSKP_TRANSFORM GEMM` (default): SCF fine, GW slower, then SIGSEGV
 
 The SCF gives the same total energy as master (-361.770793768 Ha). In the GW part:
 
