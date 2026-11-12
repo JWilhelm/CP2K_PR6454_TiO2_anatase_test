@@ -6,7 +6,41 @@ TiO2 anatase, 12 atoms in the unit cell, aug-SZV-MOLOPT-GTH-tier-2 basis (208 ba
 Monkhorst-Pack 12x12x12 k mesh (1728 k points), PBE SCF followed by a periodic RI-RS GW
 band structure (G0W0 and evGW0).
 
-## Code versions
+## Rerun 2026-11-12 (`runs_2026-11-12/`)
+
+Same inputs, same machine and layout as the first test below (Noctua 2, 16 MPI ranks x 8 OpenMP
+threads per node, 4 nodes `normal`, 1 node `hugemem`), with the updated PR:
+
+| Label | Commit | Description |
+|---|---|---|
+| master | `db0abe27be` | new merge base of PR #6454 with master |
+| PR | `059e7c1d6d` | head of PR #6454 on 2026-11-12 |
+
+All runs complete. Total energy (-361.770793768 Ha) and all band gaps are identical in all runs
+(indirect gap: PBE 1.971 eV, G0W0 3.065 eV, evGW0 3.425 eV).
+
+| 4 nodes | master | PR, GEMM (default) | PR, FFT |
+|---|---|---|---|
+| SCF (4 steps from restart) | 45 s | 7 s | 5 s |
+| χ(iτ), per time point | 11.8–12.5 s | 27.9–31.5 s | 13.5–14.6 s |
+| Σc(iτ), per time point | 17.3–18.6 s | 31.4–35.4 s | 19.2–20.5 s |
+| k ↔ R transforms in GW (timer total) | 210 s | 2975 s | 540 s |
+| Total | 3421 s | 6151 s | 3735 s |
+
+| 1 node | master | PR, GEMM (default) | PR, FFT |
+|---|---|---|---|
+| SCF (4 steps from restart) | 17 s | 6 s | 6 s |
+| χ(iτ), per time point | 90.1–94.2 s | 231.6–254.0 s | 107.6–114.6 s |
+| Σc(iτ), per time point | 277.0–287.3 s | 504.6–568.5 s | 309.7–328.5 s |
+| k ↔ R transforms in GW (timer total) | 800 s | see output | 2648 s |
+| Total | 12897 s | see output | 14566 s |
+
+k ↔ R timers: master `gw_k_grid_to_real_cells` + `cell_to_k_grid_fft`; PR
+`k_to_real_cell_transform` + `cell_to_k_transform`.
+
+## First test, 2026-11-09 (`runs/`)
+
+### Code versions
 
 | Label | Commit | Description |
 |---|---|---|
@@ -16,12 +50,12 @@ band structure (G0W0 and evGW0).
 Both were built identically (Release, GCC 14.3 / gfortran, OpenMPI and OpenBLAS 0.3.30 from
 `foss/2025b`, FFTW3 with OpenMP, DBCSR 2.10, libint 2.11, libxc 7.1).
 
-## Hardware and layout
+### Hardware and layout
 
 Noctua 2 (Paderborn), 2x AMD EPYC 7763 per node: 128 cores and 256 GB RAM per node (`normal`), 2 TB RAM per node on `hugemem` (used for the 1-node runs).
 All runs use 16 MPI ranks x 8 OpenMP threads per node (`OMP_NUM_THREADS=8`), see `run.sbatch`.
 
-## Runs
+### Runs
 
 | Run | Code | `RSKP_TRANSFORM` | Nodes | Result |
 |---|---|---|---|---|
@@ -81,7 +115,7 @@ The crash (all 64 ranks, same backtrace, `runs/SZ2_prg_4n/cp2k.stderr`):
 The same routine `product_to_k_pair_centered` runs through in the χ step, where it gets the full
 array and the q mesh.
 
-## How to rerun
+### How to rerun
 
 1. Unpack the SCF restart file into the run directory:
    `gunzip -c TiO2_anatase_sz2_2n-RESTART.kp.gz > TiO2_anatase_sz2_2n-RESTART.kp`
