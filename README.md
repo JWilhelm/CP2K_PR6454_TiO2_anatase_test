@@ -6,6 +6,29 @@ TiO2 anatase, 12 atoms in the unit cell, aug-SZV-MOLOPT-GTH-tier-2 basis (208 ba
 Monkhorst-Pack 12x12x12 k mesh (1728 k points), PBE SCF followed by a periodic RI-RS GW
 band structure (G0W0 and evGW0).
 
+## G0W0 test 2026-11-14 (`runs_2026-11-14_G0W0/`)
+
+G0W0 only: same input as below without the `&EVGW0` section. Noctua 2, 3 nodes `largemem`
+(128 cores and 1 TB RAM per node), 16 MPI ranks x 8 OpenMP threads per node.
+
+| Label | Commit | Description |
+|---|---|---|
+| master | `db0abe27be` | merge base of PR #6454 with master |
+| old PR | `059e7c1d6d` | PR head tested on 2026-11-12 |
+| new PR | `30fb7120dc` | PR head on 2026-11-14 (GW always uses the lattice FFT) |
+
+| 3 nodes | master | old PR, GEMM | old PR, FFT | new PR |
+|---|---|---|---|---|
+| SCF (4 steps from restart) | 71 s | 8 s | 6 s | 4 s |
+| χ(iτ), per time point | 53.0–62.2 s | 137.4–155.1 s | 66.6–70.7 s | out of memory at the start of χ |
+| Σc(iτ), per time point | 108.4–117.4 s | 211.7–241.3 s | 124.4–131.1 s | – |
+| Total | 1041 s | 1511 s | 1042 s | – |
+| G0W0 indirect gap | 3.065 eV | 3.065 eV | 3.065 eV | – |
+
+The new PR is killed by the out-of-memory handler right after Z_lP(q), when χ starts
+(`cp2k.stderr`), on 3 nodes and also on 6 nodes. The largest memory use per MPI rank is 48 GB with
+master; the new PR exceeds the 65 GB available per rank.
+
 ## Rerun 2026-11-12 (`runs_2026-11-12/`)
 
 Same inputs, same machine and layout as the first test below (Noctua 2, 16 MPI ranks x 8 OpenMP
