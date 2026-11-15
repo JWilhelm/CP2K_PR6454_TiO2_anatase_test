@@ -1,0 +1,21 @@
+partition,nodes,code,status,SCF,RI-RS setup,χ,W,Σx,Σc + QP,Total
+lm,1,master,ok,12,335,410,490,72,832,2177
+lm,1,pr,ok,4,305,416,495,72,815,2134
+lm,2,master,ok,34,186,249,258,80,461,1296
+lm,2,pr,ok,6,169,245,256,85,441,1229
+lm,4,master,killed: out of memory,,,,,,,
+lm,4,pr,killed: out of memory,,,,,,,
+lm,8,master,ok,89,91,131,71,87,124,626
+lm,8,pr,ok,11,86,128,75,76,121,521
+lm,16,master,ok,101,81,107,44,77,66,517
+lm,16,pr,ok,10,81,107,44,77,81,466
+no,1,master,clean abort: not enough memory,,,,,,,
+no,1,pr,clean abort: not enough memory,,,,,,,
+no,2,master,clean abort: not enough memory,,,,,,,
+no,2,pr,killed: out of memory,,,,,,,
+no,4,master,ok,51,118,165,132,28,294,815
+no,4,pr,ok,7,113,165,135,26,288,759
+no,8,master,ok,87,91,123,71,18,152,574
+no,8,pr,ok,10,87,117,70,18,147,480
+no,16,master,ok,97,92,101,44,18,69,467
+no,16,pr,ok,8,87,90,42,17,68,375

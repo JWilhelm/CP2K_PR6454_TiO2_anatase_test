@@ -1,0 +1,5 @@
+[2026-11-15T12:40:19.581] error: *** STEP 35080216.0 ON n2cn0331 CANCELLED AT 2026-11-15T12:40:19 DUE to SIGNAL Killed ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: n2cn0331: task 0: Exited with exit code 1
+srun: Terminating StepId=35080216.0
+srun: error: n2cn0331: tasks 1-15: Killed

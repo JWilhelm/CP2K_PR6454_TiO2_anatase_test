@@ -6,6 +6,51 @@ TiO2 anatase, 12 atoms in the unit cell, aug-SZV-MOLOPT-GTH-tier-2 basis (208 ba
 Monkhorst-Pack 12x12x12 k mesh (1728 k points), PBE SCF followed by a periodic RI-RS GW
 band structure (G0W0 and evGW0).
 
+## Scaling test 2026-11-15 (`runs_2026-11-15_scaling/`)
+
+G0W0 only (input of `runs_2026-11-14_G0W0/`), Noctua 2, 16 MPI ranks x 8 OpenMP threads per node,
+master `db0abe27be` and PR head `fb92e9e185` ("new PR"). Times in seconds from the CP2K timing report:
+SCF = `qs_energies` minus `qs_energies_properties`, RI-RS setup = `prepare_ri_rs`, χ = `compute_G_and_chi`,
+W = `compute_W0`, Σx = `compute_Sigma_x`, Σc + QP = `compute_Sigma_c_and_QP`, Total = `CP2K`.
+The 8-node largemem runs are repeats; the first attempt differed by about ±10 % between nodes.
+G0W0 indirect gap: 3.065 eV in every completed run.
+
+![Scaling](runs_2026-11-15_scaling/scaling_G0W0.png)
+
+#### largemem nodes (128 cores, 1 TB RAM)
+
+| Nodes | Code | SCF | RI-RS setup | χ | W | Σx | Σc + QP | Total |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| 1 | master | 12 | 335 | 410 | 490 | 72 | 832 | **2177** |
+| 1 | PR | 4 | 305 | 416 | 495 | 72 | 815 | **2134** |
+| 2 | master | 34 | 186 | 249 | 258 | 80 | 461 | **1296** |
+| 2 | PR | 6 | 169 | 245 | 256 | 85 | 441 | **1229** |
+| 4 | master | killed: out of memory | | | | | | |
+| 4 | PR | killed: out of memory | | | | | | |
+| 8 | master | 89 | 91 | 131 | 71 | 87 | 124 | **626** |
+| 8 | PR | 11 | 86 | 128 | 75 | 76 | 121 | **521** |
+| 16 | master | 101 | 81 | 107 | 44 | 77 | 66 | **517** |
+| 16 | PR | 10 | 81 | 107 | 44 | 77 | 81 | **466** |
+
+#### normal nodes (128 cores, 256 GB RAM)
+
+| Nodes | Code | SCF | RI-RS setup | χ | W | Σx | Σc + QP | Total |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| 1 | master | clean abort: not enough memory | | | | | | |
+| 1 | PR | clean abort: not enough memory | | | | | | |
+| 2 | master | clean abort: not enough memory | | | | | | |
+| 2 | PR | killed: out of memory | | | | | | |
+| 4 | master | 51 | 118 | 165 | 132 | 28 | 294 | **815** |
+| 4 | PR | 7 | 113 | 165 | 135 | 26 | 288 | **759** |
+| 8 | master | 87 | 91 | 123 | 71 | 18 | 152 | **574** |
+| 8 | PR | 10 | 87 | 117 | 70 | 18 | 147 | **480** |
+| 16 | master | 97 | 92 | 101 | 44 | 18 | 69 | **467** |
+| 16 | PR | 8 | 87 | 90 | 42 | 17 | 68 | **375** |
+
+`extra_checks/`: GW band structures master vs new PR (2D WS2 16x16x1 with SOC, BAs with SOC, CdS, LiF,
+Si 12³ and 20³: all gaps identical; Si 9³ aborts in both; Si with `PREFERRED_FFT_LIBRARY FFTSG`: master
+runs, new PR aborts).
+
 ## G0W0 test 2026-11-14 (`runs_2026-11-14_G0W0/`)
 
 G0W0 only: same input as below without the `&EVGW0` section. Noctua 2, 3 nodes `largemem`

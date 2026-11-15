@@ -1,0 +1,12 @@
+[2026-11-15T12:25:35.750] error: Detected 1 oom_kill event in StepId=35080209.0. Some of the step tasks have been OOM Killed.
+[2026-11-15T12:25:35.848] error: Detected 1 oom_kill event in StepId=35080209.0. Some of the step tasks have been OOM Killed.
+srun: error: n2lcn0165: task 50: Out Of Memory
+srun: Terminating StepId=35080209.0
+[2026-11-15T12:25:35.929] error: Detected 1 oom_kill event in StepId=35080209.0. Some of the step tasks have been OOM Killed.
+[2026-11-15T12:25:35.934] error: *** STEP 35080209.0 ON n2lcn0148 CANCELLED AT 2026-11-15T12:25:35 DUE TO TASK FAILURE ***
+[2026-11-15T12:25:36.119] error: Detected 1 oom_kill event in StepId=35080209.0. Some of the step tasks have been OOM Killed.
+[2026-11-15T12:25:36.662] error:  mpi/pmix_v4: _errhandler: n2lcn0165 [3]: pmixp_client_v2.c:226: Error handler invoked: status = -61, source = [slurm.pmix.35080209.0:50]
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-11-15T12:25:36.754] error:  mpi/pmix_v4: _errhandler: n2lcn0161 [1]: pmixp_client_v2.c:226: Error handler invoked: status = -61, source = [slurm.pmix.35080209.0:18]
+[2026-11-15T12:25:36.814] error:  mpi/pmix_v4: _errhandler: n2lcn0148 [0]: pmixp_client_v2.c:226: Error handler invoked: status = -61, source = [slurm.pmix.35080209.0:6]
+[2026-11-15T12:25:37.106] error:  mpi/pmix_v4: _errhandler: n2lcn0163 [2]: pmixp_client_v2.c:226: Error handler invoked: status = -61, source = [slurm.pmix.35080209.0:38]

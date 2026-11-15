@@ -1,0 +1,7 @@
+[2026-11-15T12:28:38.342] error: Detected 1 oom_kill event in StepId=35080210.0. Some of the step tasks have been OOM Killed.
+[2026-11-15T12:28:38.383] error: Detected 1 oom_kill event in StepId=35080210.0. Some of the step tasks have been OOM Killed.
+srun: error: n2lcn0102: task 16: Out Of Memory
+srun: Terminating StepId=35080210.0
+[2026-11-15T12:28:38.477] error: Detected 1 oom_kill event in StepId=35080210.0. Some of the step tasks have been OOM Killed.
+[2026-11-15T12:28:38.493] error: *** STEP 35080210.0 ON n2lcn0101 CANCELLED AT 2026-11-15T12:28:38 DUE TO TASK FAILURE ***
+[2026-11-15T12:28:39.136] error: Detected 1 oom_kill event in StepId=35080210.0. Some of the step tasks have been OOM Killed.
