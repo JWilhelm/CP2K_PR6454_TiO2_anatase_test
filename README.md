@@ -6,6 +6,14 @@ TiO2 anatase, 12 atoms in the unit cell, aug-SZV-MOLOPT-GTH-tier-2 basis (208 ba
 Monkhorst-Pack 12x12x12 k mesh (1728 k points), PBE SCF followed by a periodic RI-RS GW
 band structure (G0W0 and evGW0).
 
+## Crash test of PR #6591, 2026-11-18 (`runs_2026-11-18_pr6591_TZ2/`)
+
+TiO2 anatase, aug-TZVP-MOLOPT-GTH-tier-2 (700 basis functions), 12x12x12 k mesh, RS_AO_RATIO 6, G0W0,
+SCF restart. Noctua 2, 6 largemem nodes (128 cores, 1 TB RAM per node), 16 MPI ranks x 8 OpenMP threads per node.
+`TZ2_pr_largemem_6n`: PR [cp2k/cp2k#6591](https://github.com/cp2k/cp2k/pull/6591) head `4c10ed5186`, crashes at the start of χ
+(`double free or corruption (out)` in `prepare_pair_fft`). `TZ2_base_largemem_6n`: master `37e12b533d` (merge base),
+passes χ and W, then stops before Σ with the clean abort "Insufficient memory per MPI rank for GW self-energy time groups".
+
 ## Scaling test 2026-11-15 (`runs_2026-11-15_scaling/`)
 
 G0W0 only (input of `runs_2026-11-14_G0W0/`), Noctua 2, 16 MPI ranks x 8 OpenMP threads per node,

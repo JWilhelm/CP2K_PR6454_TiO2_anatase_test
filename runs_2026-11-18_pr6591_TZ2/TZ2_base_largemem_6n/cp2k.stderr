@@ -1,0 +1,40 @@
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-11-18T22:19:31.314] error: *** STEP 35262260.0 ON n2lcn0134 CANCELLED AT 2026-11-18T22:19:31 DUE to SIGNAL Killed ***
+srun: error: n2lcn0137: task 51: Killed
+srun: Terminating StepId=35262260.0
+srun: error: n2lcn0135: task 18: Killed
+srun: error: n2lcn0134: task 5: Killed
+srun: error: n2lcn0136: task 37: Killed
+srun: error: n2lcn0138: task 65: Killed
+srun: error: n2lcn0135: task 23: Killed
+srun: error: n2lcn0141: tasks 84,87: Killed
+srun: error: n2lcn0134: tasks 1,10: Killed
+srun: error: n2lcn0136: tasks 35,38: Killed
+srun: error: n2lcn0135: tasks 17,22,27: Killed
+srun: error: n2lcn0137: tasks 48-50,54-55,58,60: Killed
+srun: error: n2lcn0134: tasks 6-8,14: Killed
+srun: error: n2lcn0141: tasks 86,90,94: Killed
+srun: error: n2lcn0136: tasks 32,34,36,39,41-45,47: Killed
+srun: error: n2lcn0137: tasks 53,56-57,61-62: Killed
+srun: error: n2lcn0135: tasks 19,24-26: Killed
+srun: error: n2lcn0134: tasks 3,9,12-13,15: Killed
+srun: error: n2lcn0136: task 46: Killed
+srun: error: n2lcn0141: tasks 80,85,88-89,91-92,95: Killed
+srun: error: n2lcn0138: tasks 66,70-71,73-76,78: Killed
+srun: error: n2lcn0137: tasks 52,59: Killed
+srun: error: n2lcn0135: tasks 20-21,28-29: Killed
+srun: error: n2lcn0134: task 11: Killed
+srun: error: n2lcn0138: tasks 64,67-68: Killed
+srun: error: n2lcn0141: tasks 82,93: Killed
+srun: error: n2lcn0135: task 31: Killed
+srun: error: n2lcn0136: task 33: Killed
+srun: error: n2lcn0138: tasks 72,77,79: Killed
+srun: error: n2lcn0137: task 63: Killed
+srun: error: n2lcn0141: task 83: Killed
+srun: error: n2lcn0136: task 40: Killed
+srun: error: n2lcn0135: task 16: Killed
+srun: error: n2lcn0134: tasks 2,4: Killed
+srun: error: n2lcn0141: task 81: Killed
+srun: error: n2lcn0135: task 30: Killed
+srun: error: n2lcn0138: task 69: Killed
+srun: error: n2lcn0134: task 0: Exited with exit code 1

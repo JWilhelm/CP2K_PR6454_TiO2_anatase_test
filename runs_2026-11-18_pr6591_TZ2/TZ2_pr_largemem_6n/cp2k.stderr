@@ -1,0 +1,123 @@
+double free or corruption (out)
+
+Program received signal SIGABRT: Process abort signal.
+
+Backtrace for this error:
+double free or corruption (out)
+
+Program received signal SIGABRT: Process abort signal.
+
+Backtrace for this error:
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+#0  0x153ff345162f in ???
+#1  0x153ff34515af in ???
+#2  0x153ff3424ee4 in ???
+#3  0x153ff3492756 in ???
+#4  0x153ff3499a5b in ???
+#5  0x153ff349badf in ???
+#6  0x1540005ce0e3 in prepare_pair_fft
+	at /scratch/hpc-prf-dyncrys/eprop2d1_Jan/02_Claude/0068_pr6591_anatase_tz2/pr/source/src/gw_ri_rs_small_cell_full_kp_utils.F:2452
+#7  0x1540005e9fec in compute_chi
+	at /scratch/hpc-prf-dyncrys/eprop2d1_Jan/02_Claude/0068_pr6591_anatase_tz2/pr/source/src/gw_ri_rs_small_cell_full_kp_utils.F:938
+#8  0x1540005eeae1 in __gw_ri_rs_small_cell_full_kp_utils_MOD_compute_g_and_chi
+	at /scratch/hpc-prf-dyncrys/eprop2d1_Jan/02_Claude/0068_pr6591_anatase_tz2/pr/source/src/gw_ri_rs_small_cell_full_kp_utils.F:399
+#9  0x15400054936f in __gw_ri_rs_small_cell_full_kp_MOD_gw_calc_ri_rs_small_cell_full_kp
+	at /scratch/hpc-prf-dyncrys/eprop2d1_Jan/02_Claude/0068_pr6591_anatase_tz2/pr/source/src/gw_ri_rs_small_cell_full_kp.F:127
+#10  0x15400064136a in __gw_MOD_run_gw
+	at /scratch/hpc-prf-dyncrys/eprop2d1_Jan/02_Claude/0068_pr6591_anatase_tz2/pr/source/src/gw.F:88
+#11  0x153fffc861b0 in __post_scf_bandstructure_methods_MOD_post_scf_bandstructure
+	at /scratch/hpc-prf-dyncrys/eprop2d1_Jan/02_Claude/0068_pr6591_anatase_tz2/pr/source/src/post_scf_bandstructure_methods.F:56
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+#12  0x1540015289d3 in __qs_energy_utils_MOD_qs_energies_properties
+	at /scratch/hpc-prf-dyncrys/eprop2d1_Jan/02_Claude/0068_pr6591_anatase_tz2/pr/source/src/qs_energy_utils.F:214
+#13  0x154001520b9d in __qs_energy_MOD_qs_energies
+	at /scratch/hpc-prf-dyncrys/eprop2d1_Jan/02_Claude/0068_pr6591_anatase_tz2/pr/source/src/qs_energy.F:179
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-11-18T22:48:46.661] error: *** STEP 35263848.0 ON n2lcn0126 CANCELLED AT 2026-11-18T22:48:46 DUE to SIGNAL Killed ***
+srun: error: n2lcn0128: task 36: Killed
+srun: Terminating StepId=35263848.0
+srun: error: n2lcn0128: task 41: Killed
+srun: error: n2lcn0126: task 10: Killed
+srun: error: n2lcn0131: task 71: Killed
+srun: error: n2lcn0130: task 58: Killed
+srun: error: n2lcn0131: task 66: Killed
+srun: error: n2lcn0126: task 5: Killed
+srun: error: n2lcn0132: tasks 84,88,94: Killed
+srun: error: n2lcn0127: tasks 17,19,31: Killed
+srun: error: n2lcn0130: task 53: Killed
+srun: error: n2lcn0128: tasks 34,39,43,46-47: Killed
+srun: error: n2lcn0131: tasks 69-70,73: Killed
+srun: error: n2lcn0126: tasks 9,14-15: Killed
+srun: error: n2lcn0127: tasks 18,24: Killed
+srun: error: n2lcn0132: tasks 82-83,85-87,89,91-92,95: Killed
+srun: error: n2lcn0130: tasks 54,59,61: Killed
+srun: error: n2lcn0130: task 62: Exited with exit code 1
+srun: error: n2lcn0128: tasks 35,37-38,42,44-45: Killed
+srun: error: n2lcn0131: tasks 65,74-75,77-78: Killed
+srun: error: n2lcn0127: tasks 25,30: Killed
+srun: error: n2lcn0126: tasks 1-2,6-7,11,13: Killed
+srun: error: n2lcn0132: tasks 90,93: Killed
+srun: error: n2lcn0130: tasks 48-50,52,56-57,63: Killed
+srun: error: n2lcn0128: task 32: Killed
+srun: error: n2lcn0131: tasks 67,72: Killed
+srun: error: n2lcn0127: tasks 21-22,26: Killed
+srun: error: n2lcn0126: task 3: Killed
+srun: error: n2lcn0130: tasks 51,55: Killed
+srun: error: n2lcn0127: tasks 23,29: Killed
+srun: error: n2lcn0131: task 79: Killed
+srun: error: n2lcn0132: task 80: Killed
+srun: error: n2lcn0128: task 33: Killed
+srun: error: n2lcn0126: task 8: Killed
+srun: error: n2lcn0132: task 81: Killed
+srun: error: n2lcn0127: task 27: Killed
+srun: error: n2lcn0128: task 40: Killed
+srun: error: n2lcn0127: tasks 16,20: Killed
+srun: error: n2lcn0126: task 4: Killed
+srun: error: n2lcn0131: tasks 68,76: Killed
+srun: error: n2lcn0126: task 12: Killed
+srun: error: n2lcn0130: task 60: Killed
+srun: error: n2lcn0131: task 64: Killed
+srun: error: n2lcn0127: task 28: Killed
+srun: error: n2lcn0126: task 0: Killed
