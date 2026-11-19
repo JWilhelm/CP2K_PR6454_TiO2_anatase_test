@@ -14,7 +14,9 @@ SCF restart. Noctua 2, 6 largemem nodes (128 cores, 1 TB RAM per node), 16 MPI r
 (`double free or corruption (out)` in `prepare_pair_fft`). `TZ2_base_largemem_6n`: master `37e12b533d` (merge base),
 passes χ and W, then stops before Σ with the clean abort "Insufficient memory per MPI rank for GW self-energy time groups".
 `TZ2_base_largemem_8n`: master `37e12b533d` on 8 largemem nodes, completed (baseline for the fixed PR).
-G0W0 indirect gap 3.723 eV. Times in s: SCF 194, RI-RS setup 1483, χ 2163, W 1369, Σx 217, Σc + QP 3437, Total 9078.
+G0W0 indirect gap 3.723 eV. Times in s: SCF 194, RI-RS setup 1490, χ 2163, W 1369, Σx 217, Σc + QP 3437, Total 9078.
+`TZ2_pr2_largemem_8n`: fixed PR head `b806d268f1` (same merge base), same input and 8 largemem nodes, completed.
+G0W0 indirect gap 3.723 eV. Times in s: SCF 145, RI-RS setup 1499, χ 1968, W 1369, Σx 200, Σc + QP 2284, Total 7670 (−16 % against master).
 
 ## Scaling test 2026-11-15 (`runs_2026-11-15_scaling/`)
 
